@@ -1,8 +1,5 @@
 import $ from 'jquery';
 import moment from 'moment';
-
-import test from 'test';
-
 import _ from 'lodash-node';
 
 import 'font-awesome/css/font-awesome.css!';
@@ -11,6 +8,7 @@ import pkg from '../package.json!json';
 
 // import styles from './css/main.css!'
 
+import test from './test';
 
 console.log('is this thing on?');
 console.log($);
