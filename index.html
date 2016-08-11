@@ -6,12 +6,25 @@
 </head>
 <body>
 
+<script src="node_modules/angular2/bundles/angular2-polyfills.min.js"></script>
 <script src="jspm_packages/system.js"></script>
 <script src="config.js"></script>
 <!--<script src="vendor.js"></script>-->
 
 <script>
-    System.import('main');
+//    System.import('app/main');
+
+var readyForMainLoad
+if (location.origin.match(/localhost/)) {
+    System.trace = true
+    readyForMainLoad = System.import('systemjs-hot-reloader').then(function(HotReloader){
+        hr = new HotReloader.default('http://localhost:9089');
+    });
+}
+Promise.resolve(readyForMainLoad).then(function() {
+    System.import("app").then(function(){ console.log("running") });
+});
+
 </script>
 
 <!--<script src="build/main.js"></script>-->
