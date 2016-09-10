@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>Angular 2 JSPM Seed</title>
+    <base href="./">
+    <!--another way to include library-->
+    <script src="https://jspm.io/system@0.19.js"></script>
+    <script>
+       System.import('buffer').then(function(buffer) {
+			console.log(new buffer.Buffer('base64 encoded').toString('base64'));
+	   });
+	     System.import('npm:lodash').then(function(_) {
+			console.log(_.max([1, 2, 3, 4]));
+		});
+		 System.import('jquery').then(function($) {
+			$(window).scrollTop(0);
+		 });
+    </script>
+
+  </head>
+
+  <body>
+  </body>
+
+</html>

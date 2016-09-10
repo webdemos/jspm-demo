@@ -10,26 +10,31 @@
 <script src="jspm_packages/system.js"></script>
 <script src="config.js"></script>
 <!--<script src="vendor.js"></script>-->
+<!--<script src="build/bundle.js"></script>-->
 
 <script>
-//    System.import('app/main');
-
-var readyForMainLoad
-if (location.origin.match(/localhost/)) {
-    System.trace = true
-    readyForMainLoad = System.import('systemjs-hot-reloader').then(function(HotReloader){
-        hr = new HotReloader.default('http://localhost:9089');
+    var readyForMainLoad;
+    if (location.origin.match(/localhost/)) {
+        System.trace = true;
+        readyForMainLoad = System.import('systemjs-hot-reloader').then(function (HotReloader) {
+            hr = new HotReloader.default('http://localhost:9089');
+        });
+    }
+    Promise.resolve(readyForMainLoad).then(function () {
+        System.import("app").then(function (app) {
+            app.init();
+            console.log("running")
+        });
     });
-}
-Promise.resolve(readyForMainLoad).then(function() {
-    System.import("app").then(function(){ console.log("running") });
-});
 
 </script>
 
-<!--<script src="build/main.js"></script>-->
 
 <h1>test</h1>
+
+<h2 class="lol">CSS</h2>
+
+<h3>sass</h3>
 
 <i class="fa fa-camera-retro"></i> fa-camera-retro
 

@@ -1,15 +1,15 @@
-@value darkblue: #001f3f;
+@value lights: #e6e6ee;
 
 body {
     margin: 0;
-    background: darkblue;
-    display: flex;
+    background: lights;
+    /*display: flex;*/
 }
 
 .lol {
     composes: lightBlueBackground from "./backgrounds.css";
     composes: fontSize24pt dashed-border from "./b.css";
-    color: white;
+    color: deepskyblue;
     padding: 2rem;
     margin: 1rem;
     border-width: 1px;

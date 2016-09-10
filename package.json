@@ -7,12 +7,17 @@
     "start": "node server",
     "test": "echo \"Error: no test specified\" && exit 1",
     "bundle": "jspm bundle main vendor.js --inject",
-    "build": "jspm bundle-sfx main build/main.js --inject"
+    "build": "jspm bundle-sfx app build/bundle.js --inject",
+    "go": "node app-cli",
+    "jspm": "jspm"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "angular2": "^2.0.0-beta.17",
+    "cli-spinner": "^0.2.5"
+  },
+  "devDependencies": {
     "chokidar-socket-emitter": "^0.5.4",
     "es6-promise": "^3.2.1",
     "es6-shim": "^0.35.1",
@@ -29,13 +34,16 @@
       "bootstrap": "github:twbs/bootstrap@^3.3.7",
       "css": "github:systemjs/plugin-css@^0.1.26",
       "font-awesome": "npm:font-awesome@^4.6.3",
+      "image": "github:systemjs/plugin-image@^0.1.0",
       "jquery": "npm:jquery@^3.1.0",
       "jquery-ui": "github:components/jqueryui@^1.12.0",
       "json": "github:systemjs/plugin-json@^0.1.2",
       "lodash-node": "npm:lodash-node@^3.10.2",
       "moment": "npm:moment@^2.14.1",
+      "sass": "github:mobilexag/plugin-sass@^0.4.6",
       "scss": "github:KevCJones/plugin-scss@^0.2.11",
       "systemjs-hot-reloader": "github:capaj/systemjs-hot-reloader@^0.6.0",
+      "text": "github:systemjs/plugin-text@^0.0.9",
       "ts": "github:frankwallis/plugin-typescript@^5.0.9"
     },
     "devDependencies": {
