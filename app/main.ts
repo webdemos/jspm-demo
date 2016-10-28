@@ -2,7 +2,7 @@ import 'font-awesome/css/font-awesome.css!';
 
 import $ from 'jquery';
 import moment from 'moment';
-import _ from 'lodash-node';
+import * as _ from "lodash";
 
 import main from './css/style.css!';
 import styles from './css/main.css!'
@@ -15,7 +15,7 @@ console.log('is this thing on?');
 
 console.log('This is jquery: ' + $);
 console.log('This is moment: ' + moment);
-console.log('This is lodash: ' + _);
+console.log('This is lodash: ' + _.repeat('w', 3));
 
 console.log('This is main style: ' + main);
 console.log('This is package.json: ' + pkg);
