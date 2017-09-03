@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "node server",
-    "test": "echo \"Error: no test specified\" && exit 1",
     "bundle": "jspm bundle main vendor.js --inject",
     "build": "jspm bundle-sfx app build/bundle.js --inject",
     "go": "node app-cli",
+    "postinstall": "jspm i",
     "jspm": "jspm"
   },
   "author": "",
@@ -38,9 +38,9 @@
       "json": "github:systemjs/plugin-json@^0.1.2",
       "lodash": "npm:lodash@^4.16.4",
       "moment": "npm:moment@^2.14.1",
-      "sass": "github:mobilexag/plugin-sass@^0.4.6",
+      "sass": "github:dougludlow/plugin-sass@^0.4.6",
       "scss": "github:KevCJones/plugin-scss@^0.2.11",
-      "systemjs-hot-reloader": "github:capaj/systemjs-hot-reloader@^0.6.0",
+      "systemjs-hot-reloader": "github:alexisvincent/systemjs-hot-reloader@^0.6.0",
       "text": "github:systemjs/plugin-text@^0.0.9",
       "ts": "github:frankwallis/plugin-typescript@^5.0.9"
     },
